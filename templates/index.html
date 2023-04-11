@@ -1,0 +1,554 @@
+
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Medica - The Doctor's Best Friend</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="icon" type="image/x-icon" href="static/images/favicon.png">
+
+	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="static/css/animate.css">
+	<link rel="stylesheet" href="static/css/icomoon.css">
+	<link rel="stylesheet" href="static/css/bootstrap.css">
+	<link rel="stylesheet" href="static/css/flexslider.css">
+	<link rel="stylesheet" href="static/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="static/css/style.css">
+	<style>
+		.drop_box {
+		margin: 10px 0;
+		padding: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		}
+
+		.form input {
+		margin: 10px 0;
+		width: 100%;
+		background-color: #e2e2e2;
+		border: none;
+		outline: none;
+		padding: 12px 20px;
+		border-radius: 4px;
+		}
+	</style>
+	<!-- Modernizr JS -->
+	<script src="static/js/modernizr-2.6.2.min.js"></script>
+
+	</head>
+	<body>
+	
+	
+	<div id="fh5co-page">
+	<header id="fh5co-header" role="banner">
+		<div class="container">
+			<div class="header-inner">
+				<h1><a href="index.html">Medica</a></h1>
+				<nav role="navigation">
+					<ul>
+						<!-- <li><a href="index.html">Home</a></li>
+						<li><a href="work.html">Work</a></li>
+						<li><a href="services.html">Services</a></li>
+						<li><a href="pricing.html">Pricing</a></li>
+						<li><a href="about.html">About</a></li> -->
+						<li><a href="contact/">Contact</a></li>
+						<li class="cta"><a href="#">Login</a></li>
+						<li class="cta"><a href="#">SignUp</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	
+	<div class="container">
+
+	</div>
+	<aside id="fh5co-hero" class="js-fullheight">
+		<div class="flexslider js-fullheight">
+			<ul class="slides">
+		   	<li style="background-image: url(static/images/slide_1.jpg);">
+		   		<div class="overlay-gradient"></div>
+		   		<div class="container">
+		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+		   				<div class="slider-text-inner">
+		   					<h2>Medica - The Doctor's Best Friend</h2>
+		   					<p><a href="#" class="btn btn-primary btn-lg">Get Started</a></p>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+		   	<li style="background-image: url(images/slide_2.jpg);">
+		   		<div class="container">
+		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+		   				<div class="slider-text-inner">
+		   					<h2>Just Make Sure You Don't Have Any Of The Health Issues</h2>
+		   					<p><a href="#" class="btn btn-primary btn-lg">Get started</a></p>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+		   	<li style="background-image: url(static/images/slide_3.jpg);">
+		   		<div class="container">
+		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
+		   				<div class="slider-text-inner">
+		   					<h2>We Think Different That Others Can't</h2>
+		   					<p><a href="#" class="btn btn-primary btn-lg">Get started</a></p>
+		   				</div>
+		   			</div>
+		   		</div>
+		   	</li>
+		  	</ul>
+	  	</div>
+	</aside>
+
+{% for message in messages%}
+		<div class="alert alert-primary" role="alert">
+  {{message}}
+</div>
+
+		{% endfor %}
+
+	<div id="fh5co-services-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
+					<h2>Diseases We Are Capable Of Predicting</h2>
+					<p>Experience The Future Of Disease Diagnosis With Our Innovative Features. Below Are Some Of The Diseases Our App Predicts. </p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-bargraph"></i>
+						<div class="desc">
+							<h3>Breast Cancer</h3>
+							<p>Breast cancer is the most common cancer among women worldwide. It starts as a small lump or mass in the breast tissue and can spread to other parts of the body. Early detection through self-exams, mammograms, and regular check-ups is crucial for successful treatment and survival.</p>
+							<!-- <p><a href="#" class="btn btn-primary btn-lg">Upload</a></p><br> -->
+							<div class="drop_box">
+								<form action="breastc/" method="post">
+				                                   {% csrf_token %}
+
+								<input type="text" name="breastc" style="margin-left:-24px";><br><br>
+								<button class="btn btn-primary btn-lg" type="submit">Submit</button>
+
+
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-server"></i>
+						<div class="desc">
+							<h3>Brain Tumor</h3>
+							<p>A brain tumor is an abnormal growth of cells in or near the brain. They can be benign or include malignant and treatment malignant and treatment malignant and treatment malignant and treatment options include surgery and include surgery and radiation therapy.</p>
+							<!-- <p><a href="#" class="btn btn-primary btn-lg">Upload</a></p><br> -->
+							<div class="drop_box">
+								<input type="text" name="breastc" style="margin-left:-24px";><br><br>
+								<button class="btn btn-primary btn-lg">Choose File</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-linegraph"></i>
+						<div class="desc">
+							<h3>Polyps</h3>
+							<p>Polyps are abnormal growths of tissue that can occur in various parts of the body, including the colon, uterus, cervix, throat, stomach, and nose. Most are benign, but some can become cancerous. Treatment depends on location, size, and whether they are malignant.</p>
+							<!-- <p><a href="#" class="btn btn-primary btn-lg">Upload</a></p><br> -->
+							<div class="drop_box">
+								<input type="text" name="breastc" style="margin-left:-24px";><br><br>
+								<button class="btn btn-primary btn-lg">Choose File</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-bargraph"></i>
+						<div class="desc">
+							<h3>Dyed Liftedpolyps</h3>
+							<p>Generally, enough fluid is injected to obtain a complete provide a 5-mm to 10-mm rim around the polyp to obtain a complete lift a complete lift. Generally, enough fluid is injected to provide a 5-mm to 10-mm rim around the polyp to obtain a complete lift.</p>
+							<!-- <p><a href="#" class="btn btn-primary btn-lg">Upload</a></p><br> -->
+							<div class="drop_box">
+								<input type="text" name="breastc" style="margin-left:-24px";><br><br>
+								<button class="btn btn-primary btn-lg">Choose File</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-bar-chart"></i>
+						<div class="desc">
+							<h3>Normal z line</h3>
+							<p>The Z line is a thin, dark line that separates the I band of one sarcomere from the next in skeletal line that separates the I band muscle the next in skeletal muscle. A normal Z line indicates healthy muscle function.</p>
+							<!-- <p><a href="#" class="btn btn-primary btn-lg">Upload</a></p><br> -->
+							<div class="drop_box">
+								<input type="text" name="breastc" style="margin-left:-24px";><br><br>
+								<button class="btn btn-primary btn-lg">Choose File</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-line-chart"></i>
+						<div class="desc">
+							<h3>Normal Pylorus</h3>
+							<p>The pylorus is a muscular ring that connects the stomach and small intestine, controlling the passage of partially digested food and stomach juices. A normal pylorus allows for proper digestion and absorption of nutrients.</p>
+							<!-- <p><a href="#" class="btn btn-primary btn-lg">Upload</a></p><br> -->
+							<div class="drop_box">
+								<input type="text" name="breastc" style="margin-left:-24px";><br><br>
+								<button class="btn btn-primary btn-lg">Choose File</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-pie-chart"></i>
+						<div class="desc">
+							<h3>Dyed Resection Margin</h3>
+							<p>A fluorescence-based pre-screening strategy using a molecular rotor can detect tumor cells in resected surgical margins during tumor resection operations-free surgical margins and promoting clinical decision-making.
+							</p>
+							<!-- <p><a href="#" class="btn btn-primary btn-lg">Upload</a></p><br> -->
+							<div class="drop_box">
+								<input type="text" name="breastc" style="margin-left:-24px";><br><br>
+								<button class="btn btn-primary btn-lg">Choose File</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-area-chart"></i>
+						<div class="desc">
+							<h3>Esophagitis</h3>
+							<p>Esophagitis is inflammation of the esophagus that can cause painful, difficult swallowing, chest pain, and heartburn. It can be caused by acid reflux, or allergies. Treatment depends on the underlying cause.</p>
+							<!-- <p><a href="#" class="btn btn-primary btn-lg">Upload</a></p><br> -->
+							<div class="drop_box">
+								<input type="text" name="breastc" style="margin-left:-24px";><br><br>
+								<button class="btn btn-primary btn-lg">Choose File</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-server"></i>
+						<div class="desc">
+							<h3>Pneumonia</h3>
+							<p>Pneumonia is a lung infection caused by bacteria, viruses, or fungi that can result in fluid or pus result in fluid or in the lungs. Symptoms include cough, fever, shortness of breath, and chest pain.</p>
+							<!-- <p><a href="#" class="btn btn-primary btn-lg">Upload</a></p><br> -->
+							<div class="drop_box">
+								<input type="text" name="breastc" style="margin-left:-24px";><br><br>
+								<button class="btn btn-primary btn-lg">Choose File</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-piechart"></i>
+						<div class="desc">
+							<h3>Normal Cecum</h3>
+							<p>The cecum is a large tubelike structure in the lower abdomen that receives undigested food material from the small intestine for further digestion and fecal formation.</p>
+							<!-- <p><a href="#" class="btn btn-primary btn-lg">Upload</a></p> -->
+							<div class="drop_box">
+								<input type="text" name="breastc" style="margin-left:-24px";><br><br>
+								<button class="btn btn-primary btn-lg">Choose File</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="services">
+						<i class="icon-bar-chart"></i>
+						<div class="desc">
+							<h3>Ulcerative Colitis</h3>
+							<p>Ulcerative colitis is a chronic inflammatory bowel disease that causes inflammation and ulcers in the large intestine, with symptoms including diarrhea, anemia, abdominal pain, rectal bleeding, and weight loss.</p>
+							<!-- <p><a href="#" class="btn btn-primary btn-lg">Upload</a></p> -->
+							<div class="drop_box">
+								<input type="text" name="breastc" style="margin-left:-24px";><br><br>
+								<button class="btn btn-primary btn-lg">Choose File</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="fh5co-team fh5co-light-grey-section">
+		<div class="container">
+			
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
+						<h2>Meet The Hackers</h2>
+						<p>Get to know the hackers behind our disease diagnosis service. </p>
+					</div>
+					<div class="col-md-4 fh5co-staff text-center animate-box">
+						<img src="static/images/person2.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
+						<h3>Niharika Gupta</h3>
+						<h4>Designer</h4>
+						<p>Myself Niharika Gupta, I am elite in Graphic Designing, Logo Creation and Front-End Web Development.</p>
+						<ul class="fh5co-social">
+							<li><a href="#"><i class="icon-google"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-instagram"></i></a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 fh5co-staff text-center animate-box">
+						<img src="static/images/person3.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
+						<h3>Geetesh Mehto</h3>
+						<h4>ML Developer</h4>
+						<p>Myself Geetesh Mehto, I am elite in Python, Django and Front-End Web Development. I am beginner in Machine Learning and Flask.</p>
+						<ul class="fh5co-social">
+							<li><a href="#"><i class="icon-google"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-instagram"></i></a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 fh5co-staff text-center animate-box">
+						<img src="static/images/person1.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
+						<h3>Parag Agrawal</h3>
+						<h4>Full Stack Developer</h4>
+						<p>Myself Parag, I am a Python Programmer. I have experience in developing web apps using PHP, MySQL, HTML, CSS and JS.</p>
+						<ul class="fh5co-social">
+							<li><a href="#"><i class="icon-google"></i></a></li>
+							<li><a href="#"><i class="icon-dribbble"></i></a></li>
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+		</div>
+	</div>
+
+
+
+	<div id="fh5co-testimony-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
+					<h2>Clients Feedback</h2>
+					<p>Hear from our satisfied patients about our accurate disease diagnosis. Don't take our word for it, read what our patients have to say.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-offset-0 to-animate">
+					<div class="wrap-testimony animate-box">
+						<div class="owl-carousel-fullwidth">
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="static/images/person2.jpg" alt="user">
+									</figure>
+									<blockquote>
+										<p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea distinctio optio, voluptatum voluptate velit expedita adipisci. Impedit atque ipsam est earum natus sit, rerum iure officia aliquid tempora quo harum."</p>
+									</blockquote>
+									<span>Khushi Soni, via <a href="#" class="twitter">Twitter</a></span>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="static/images/person3.jpg" alt="user">
+									</figure>
+									<blockquote>
+										<p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sed veritatis unde, autem nisi officia quisquam! Tempore exercitationem magnam aspernatur cumque dolor odit suscipit dolores non consequuntur, maiores ea earum."</p>
+									</blockquote>
+									<span>Shivam Patidar, via <a href="#" class="twitter">Twitter</a></span>
+								</div>
+							</div>
+							<div class="item">
+								<div class="testimony-slide active text-center">
+									<figure>
+										<img src="static/images/person1.jpg" alt="user">
+									</figure>
+									<blockquote>
+										<p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, impedit fugiat? Recusandae tempora optio dignissimos eveniet! Harum qui quis iste praesentium ad, aspernatur ab, iure natus dolores saepe reprehenderit perferendis."</p>
+									</blockquote>
+									<span>Amit Trevedi, via <a href="#" class="twitter">Twitter</a></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="fh5co-blog-section" class="fh5co-light-grey-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
+					<h2>Blogs</h2>
+					<p>Get insights and updates on disease diagnosis through our blog. </p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-sm-6 animate-box">
+					<a href="#" class="item-grid">
+						<div class="image" style="background-image: url(static/images/image_1.jpg)"></div>
+						<div class="v-align">
+							<div class="v-align-middle">
+								<h3 class="title">Lorem ipsum dolor sit.</h3>
+								<h5 class="date"><span>April 1, 2023</span></h5>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim corrupti numquam aliquid reprehenderit delectus nemo sed esse. Cum doloremque, consectetur iure ad illum recusandae. Inventore!</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-6 col-sm-6 animate-box">
+					<a href="#" class="item-grid">
+						<div class="image" style="background-image: url(static/images/image_2.jpg)"></div>
+						<div class="v-align">
+							<div class="v-align-middle">
+								<h3 class="title">Lorem, ipsum dolor.</h3>
+								<h5 class="date"><span>April 1, 2023</span></h5>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quo maiores modi asperiores iste, sequi aliquam voluptas maxime assumenda harum labore consequatur illo odio dolorum.</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-12 text-center animate-box">
+					<p><a href="#" class="btn btn-primary with-arrow">View More Post <i class="icon-arrow-right"></i></a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="fh5co-cta" style="background-image: url(static/images/slide_2.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="col-md-12 text-center animate-box">
+				<h3>Accurate Disease Diagnosis Through Advanced X-Ray Analysis</h3>
+				<p><a href="#" class="btn btn-primary btn-outline with-arrow">Get started now! <i class="icon-arrow-right"></i></a></p>
+			</div>
+		</div>
+	</div>
+
+	
+	<footer id="fh5co-footer" role="contentinfo">
+	
+		<div class="container">
+			<div class="col-md-3 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+				<h3>About Us</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ipsum explicabo porro impedit pariatur totam? </p>
+				<!-- <p><a href="#" class="btn btn-primary btn-outline with-arrow btn-sm">Join Us <i class="icon-arrow-right"></i></a></p> -->
+			</div>
+			<div class="col-md-6 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+				<h3>Our Services</h3>
+				<ul class="float">
+					<li><a href="#">Disease Detection</a></li>
+					<li><a href="#">Virtual &amp; Doctor</a></li>
+					<li><a href="#">X-Ray Detection</a></li>
+					<li><a href="#">Online Doctor</a></li>
+				</ul>
+
+			</div>
+
+			<div class="col-md-2 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+				<h3>Follow Us</h3>
+				<ul class="fh5co-social">
+					<li><a href="#"><i class="icon-twitter"></i></a></li>
+					<li><a href="#"><i class="icon-facebook"></i></a></li>
+					<li><a href="#"><i class="icon-google-plus"></i></a></li>
+					<li><a href="#"><i class="icon-instagram"></i></a></li>
+				</ul>
+			</div>
+			
+			
+			<div class="col-md-12 fh5co-copyright text-center">
+				<p>&copy; 2023 All Rights Reserved. <span>Designed with <i class="icon-heart"></i> by <a>Coding Warriors</a></span></p>	
+			</div>
+			
+		</div>
+	</footer>
+	</div>
+	
+	
+	<!-- JS -->
+<!--	<script>-->
+<!--	const dropArea = document.querySelector(".drop_box"),-->
+<!--	button = dropArea.querySelector("button"),-->
+<!--	dragText = dropArea.querySelector("header"),-->
+<!--	input = dropArea.querySelector("input");-->
+<!--	let file;-->
+<!--	var filename;-->
+
+<!--	button.onclick = () => {-->
+<!--	  input.click();-->
+<!--	};-->
+
+<!--	input.addEventListener("change", function (e) {-->
+<!--	  var fileName = e.target.files[0].name;-->
+<!--	  let filedata = `-->
+<!--		<form action="breastc/" method="post">-->
+<!--				{% csrf_token %}-->
+<!--		<div class="form">-->
+<!--		<h4>${fileName}</h4>-->
+<!--		<input type="email" placeholder="Enter email upload file">-->
+<!--		<button class="btn">Upload</button>-->
+<!--		</div>-->
+<!--		</form>`;-->
+<!--	  dropArea.innerHTML = filedata;-->
+<!--	});-->
+<!--	</script>-->
+	<script async src="static/js/jquery.min.js"></script>
+	<script async src="static/js/jquery.easing.1.3.js"></script>
+	<script async src="static/js/bootstrap.min.js"></script>
+	<script async src="static/js/jquery.waypoints.min.js"></script>
+	<script async src="static/js/owl.carousel.min.js"></script>
+	<script async src="static/js/jquery.flexslider-min.js"></script>
+	<script async src="static/js/main.js"></script>
+
+	</body>
+</html>
+
